@@ -6,7 +6,7 @@ module.exports = {
       summary: ``,
     },
     description: ``,
-    siteUrl: `https://graily0031.githube.io/`,
+    siteUrl: `https://graily0031.github.io/`,
     social: {
       instagram: `person.prototype`,
     },
