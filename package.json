@@ -33,7 +33,8 @@
     "react-typography": "^0.16.20",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
-    "typography": "^0.16.21"
+    "typography": "^0.16.21",
+    "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
