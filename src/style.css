@@ -251,6 +251,7 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  float: left;
 }
 
 .main-heading {
