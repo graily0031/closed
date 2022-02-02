@@ -8,6 +8,7 @@
     "url": "https://github.com/graily0031"
   },
   "dependencies": {
+    "fontsource-noto-sans-kr": "^4.0.0",
     "gatsby": "^4.6.0",
     "gatsby-plugin-feed": "^4.6.0",
     "gatsby-plugin-gatsby-cloud": "^4.6.0",

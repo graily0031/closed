@@ -3,6 +3,10 @@ import "typeface-montserrat"
 import "typeface-merriweather"
 // normalize CSS across browsers
 import "./src/normalize.css"
+
+//korFont
+import "fontsource-noto-sans-kr";
+
 // custom CSS styles
 import "./src/style.css"
 
