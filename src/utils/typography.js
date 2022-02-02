@@ -20,4 +20,4 @@ const typography = new Typography({
     boldWeight: 700,
 })
 
-export default typography
+export default typography`

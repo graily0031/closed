@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `railyilra blog`,
+    title: `railyilra-blog`,
     author: {
       name: `railyilra`,
       summary: ``,
@@ -28,7 +28,6 @@ module.exports = {
       },
     },
     {
-      //typography
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
