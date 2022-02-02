@@ -10,7 +10,7 @@ const typography = new Typography({
         },
         {
             name: "Noto Sans KR",
-            styles: ["400", "700"],r
+            styles: ["400", "700"],
         },
     ],
     headerFontFamily: ["Noto Sans KR", "sans-serif"],
