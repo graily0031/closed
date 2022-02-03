@@ -264,11 +264,11 @@ a:focus {
   line-height: var(--spacing-12);
 }
 
-body.light header.global-header {
+body.light header {
   background-color: white;
 }
 
-body.black header.global-header {
+body.black header {
   background-color: var(--color-background-dark);
 }
 
