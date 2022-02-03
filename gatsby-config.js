@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `railyilra-blog`,
+    title: `일기장`,
     author: {
-      name: `railyilra`,
+      name: `라일리일라`,
       summary: ``,
     },
     description: ``,
