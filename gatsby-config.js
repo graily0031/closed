@@ -3,7 +3,7 @@ module.exports = {
     title: `일기장`,
     author: {
       name: `라일리일라`,
-      summary: `2021.02.22 ~ 개발자가 되고싶은 코더`,
+      summary: ` 2021.02.22 ~ 개발자가 되고싶은 코더`,
     },
     description: ``,
     siteUrl: `https://graily0031.github.io/`,
