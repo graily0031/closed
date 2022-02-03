@@ -1,219 +1,143 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Gatsby Starter Blog RSS Feed]]></description><link>https://graily0031.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Feb 2022 09:46:42 GMT</lastBuildDate><item><title><![CDATA[테스트]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://graily0031.github.io/lang/</link><guid isPermaLink="false">https://graily0031.github.io/lang/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Gatsby Starter Blog RSS Feed]]></description><link>https://graily0031.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Feb 2022 10:08:01 GMT</lastBuildDate><item><title><![CDATA[C언어 포인터]]></title><description><![CDATA[Pointer…]]></description><link>https://graily0031.github.io/C_lang/cLang_pointer/</link><guid isPermaLink="false">https://graily0031.github.io/C_lang/cLang_pointer/</guid><pubDate>Wed, 23 Feb 2022 18:56:00 GMT</pubDate><content:encoded>&lt;h2&gt;Pointer&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+&lt;p&gt;포인터도 일종의 &lt;code class=&quot;language-text&quot;&gt;변수&lt;/code&gt;이다. (변수와 같이 선언한 변수 타입에 따라) 특정한 데이터가 들어간다. 포인터는 그 특정 데이터가 저장된 &lt;code class=&quot;language-text&quot;&gt;주소값&lt;/code&gt;을 보관하는 변수이다.&lt;br&gt;
+포인터의 정의는 &lt;code class=&quot;language-text&quot;&gt;포인터에 주소값이 저장되는 데이터 타입* 포인터명&lt;/code&gt; (데이터의 주소값을 저장하는 변수를 정의) 혹은 단항일 경우엔 &lt;code class=&quot;language-text&quot;&gt;*포인터명&lt;/code&gt;이다. &lt;code class=&quot;language-text&quot;&gt;곱셈 연산자&lt;/code&gt;가 아니다. 곱셈연산자와 달리 포인터 정의하는 연산자는 &lt;code class=&quot;language-text&quot;&gt;1개의 피연산자&lt;/code&gt;를 필요로 한다.&lt;br&gt;
+포인터를 정의한 뒤 값을 넣어야 할 때 &lt;code class=&quot;language-text&quot;&gt;&amp;amp; 연산자&lt;/code&gt;를 이용한다. &lt;code class=&quot;language-text&quot;&gt;피연산자가 2개 들어가는 AND연산자&lt;/code&gt;와 달리 &lt;code class=&quot;language-text&quot;&gt;1개의 피연산자&lt;/code&gt;가 필요한다 &lt;code class=&quot;language-text&quot;&gt;&amp;amp;주소값을 계산할 데이터&lt;/code&gt;이렇게 정의하여 사용한다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dWC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACERJC/9oACAEBAAEFAkqW7B5Zovtvk//EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAESL/2gAIAQIBAT8BjT//xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhQYGx/9oACAEBAAE/IXOrA43oOyg9wgU86OZMfwZKypT/2gAMAwEAAgADAAAAEMjv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxARwyusv//EABcRAQEBAQAAAAAAAAAAAAAAAAEAIVH/2gAIAQIBAT8QOoVoX//EAB0QAQEAAgIDAQAAAAAAAAAAAAERADFhgSFB0eH/2gAIAQEAAT8QSpwaGjrBSrtHyF9iY8RpUnGRBGqtOcsiDE6fM3AgiXf5M//Z&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Chinese Salty Egg&quot;
-        title=&quot;Chinese Salty Egg&quot;
-        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
-        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
-/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
-/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
-/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
-/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
-/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;You can also write code blocks here!&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; saltyDuckEgg &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;chinese preserved food product&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;Number&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Title&lt;/th&gt;
-&lt;th align=&quot;right&quot;&gt;Year&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;1&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Philosopher’s Stone&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2001&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;2&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Chamber of Secrets&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2002&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;3&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Prisoner of Azkaban&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2004&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;a href=&quot;https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md&quot;&gt;View raw (TEST.md)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is a paragraph.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Header 1
-========
-
-Header 2
---------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1 #
-## Header 2 ##
-### Header 3 ###
-#### Header 4 ####
-##### Header 5 #####
-###### Header 6 ######&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;#&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;stdio&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;h&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 포인터 선언&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;d&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;포인터 장점 및 단점&lt;/h3&gt;
+&lt;h4&gt;장점&lt;/h4&gt;
+&lt;p&gt;포인터 변수는 4byte의 주소만 가지게 된다. 함수의 인자로 넘길경우 메모리 복사도 4byte 만큼만 일어나게 된다. 클래스 같이 큰 객체도 포인터형으로 전달될 경우 해당 메모리의 첫번째 주소값이 넘어가기 때문에 &lt;code class=&quot;language-text&quot;&gt;불필요한 메모리 복사가 일어나지 않게 된다.&lt;/code&gt;&lt;br&gt;
+주소를 컨트롤 하므로 원본에 대한 값 변경이 용이하다. 데이터에 대한 접근이 빨라 처리속도가 나쁘지 않다.&lt;br&gt;
+배열로 생성할 수 없는 데이터를 생성할 수 있다.&lt;/p&gt;
+&lt;h4&gt;단점&lt;/h4&gt;
+&lt;p&gt;Null 포인터에 직접 접근 등의 &lt;code class=&quot;language-text&quot;&gt;예외&lt;/code&gt;에 대한 처리가 확실치 않는 경우 예기치 못한 문제가 발생할 수 있다. 또하누 오류를 범하거나 기교적인 프로그램이 되기 쉽다.&lt;br&gt;
+주소를 직접 참조하기 때문에 의도치 않게 원본 값이 수정될 수 있고 선언만 하고 초기화 하지 않을 시 쓰레기 주소를 가리킨다.&lt;br&gt;
+메모리 절대 번지 접근시 시스템 오류를 초래한다.&lt;/p&gt;
+&lt;h2&gt;배열과 포인터&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
+&lt;p&gt;배열은 간단하게 말하자면 같은 타입의 변수들의 집합이다.&lt;br&gt;
+언뜻 같은 듯 하지만 배열과 포인터는 완전히 같지 않다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;배열은 그 자체가 크기 때문에 함수 인자로 전달할 수 없다. 하여 &lt;code class=&quot;language-text&quot;&gt;배열을 함수로 전달할 때 반드시 포인터를 사용&lt;/code&gt;해야 한다.&lt;br&gt;
+동작의 속도 차이가 있는데, 배열은 배열 선두부터 출발하지만 포인터의 경우 대상체로 직접 이동해서 읽으므로 포인터의 액세스 속도가 빠르다. &lt;code class=&quot;language-text&quot;&gt;*p&lt;/code&gt;는 p가 가리키는 곳을 바로 읽을 수 있는데 비해 배열은&lt;code class=&quot;language-text&quot;&gt;(array[i]) *(array+i)&lt;/code&gt; 이렇게 번지를 더한 후 읽어야 하므로 포인터보다 느릴 수 있겠다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;배열은 상수&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;포인터는 변수&lt;/code&gt;이다. 포인터는 고유의 메모리를 차지하며 언제든 다른 대상을 가리킬 수 있으나 배열은 이미 해당 위치가 고정되어 있어 다른 대상을 가리킬 수 없으며 배열은 오직 배열의 선두 번지를 읽을 수 있다. 선언할 때 크기 지정도 &lt;code class=&quot;language-text&quot;&gt;배열&lt;/code&gt;의 경우 &lt;code class=&quot;language-text&quot;&gt;선언시 정적으로 결정&lt;/code&gt;되어야 하나 &lt;code class=&quot;language-text&quot;&gt;포인터&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;동적으로 선언&lt;/code&gt;할 수 있다. 만일 가변길이 배열이 필요한 경우 int*형의 포인터 변수를 선언한 뒤 malloc으로 할당해 사용하여야 한다. 포인터로 할당한 배열은 실행 중에라도 realloc으로 크기를 재 할당해 변경할 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[SQL 개념 익히기 - JOIN]]></title><description><![CDATA[JOIN JOIN…]]></description><link>https://graily0031.github.io/sql/join/</link><guid isPermaLink="false">https://graily0031.github.io/sql/join/</guid><pubDate>Wed, 23 Feb 2022 18:56:00 GMT</pubDate><content:encoded>&lt;h2&gt;JOIN&lt;/h2&gt;
+&lt;h3&gt;JOIN이란?&lt;/h3&gt;
+&lt;p&gt;두개 이상의 테이블을 결합하여 데이터를 검색하는 방법&lt;br&gt;
+즉 두개의 테이블을 하나의 테이블인 것 처럼 보여지게 한다.&lt;br&gt;
+보통 &lt;code class=&quot;language-text&quot;&gt;Primary key&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Foreign key&lt;/code&gt;를 활용하여 테이블을 연결한다.
+사용 조건은 두개의 테이블 중 적어도 하나의 공통된 컬럼이 존재하여야 하며 해당 컬럼의 값은 공유되어야 한다.&lt;/p&gt;
+&lt;h3&gt;JOIN 종류&lt;/h3&gt;
+&lt;h4&gt;INNER JOIN&lt;/h4&gt;
+&lt;p&gt;교집합 개념의 JOIN, 기준 테이블과 JOIN 한 테이블의 중복값을 출력한다.&lt;br&gt;
+즉 두 테이블이 모두 가지고 있는 데이터만 검색이 가능하다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
+    테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
+&lt;span class=&quot;token keyword&quot;&gt;INNER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭 &lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; 기준테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;기준키 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 조인테이블별칭 기준키&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;LEFT OUTER JOIN&lt;/h4&gt;
+&lt;p&gt;기준 테이블 값 + 테이블과 기준 테이블의 중복된 값이다.&lt;br&gt;
+(왼쪽 테이블)  + (오른쪽) &lt;code class=&quot;language-text&quot;&gt;(왼쪽 테이블 기준으로 JOIN)&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
+&lt;span class=&quot;token keyword&quot;&gt;LEFT&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;OUTER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭 &lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; 기준테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;기준키 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 조인테이블별칭 기준키&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;RIGHT OUTER JOIN&lt;/h4&gt;
+&lt;p&gt;LEFT OUTER JOIN의 반대개념이다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;우측 테이블이 기준&lt;/code&gt; 테이블이고 기준 테이블 기준으로 &lt;code class=&quot;language-text&quot;&gt;우측 테이블과 좌측 테이블의 중복된 값&lt;/code&gt;이 검색된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
+&lt;span class=&quot;token keyword&quot;&gt;RIGHT&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;OUTER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭 &lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; 기준테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;기준키 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 조인테이블별칭 기준키&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;FULL OUTER JOIN&lt;/h4&gt;
+&lt;p&gt;합집합의 개념이다. 좌측 및 우측 테이블이 가지고 있는 데이터 모두 검색된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
+&lt;span class=&quot;token keyword&quot;&gt;FULL&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;OUTER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭 &lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; 기준테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;기준키 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 조인테이블별칭 기준키&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;CROSS JOIN&lt;/h4&gt;
+&lt;p&gt;모든 경우의 수를 전부 표현해주는 방식이다.&lt;br&gt;
+한 쪽 테이블의 모든 행과 다른 테이블의 모든 행을 조인하여 검색된다. &lt;code class=&quot;language-text&quot;&gt;(논리곱 개념)&lt;/code&gt;&lt;br&gt;
+예를 들어 테이블1 데이터 5개 테이블2 데이터 4개가 있다면 총 20개가 검색되어 나온다.&lt;br&gt;
+데이터 양에 따라 용량이 초과되거나 서버가 다운될 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
+&lt;span class=&quot;token keyword&quot;&gt;CROSS&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭
+
+&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt;
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할칼럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할칼럼
+&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;조인테이블 별칭&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;SELF JOIN&lt;/h4&gt;
+&lt;p&gt;자기 자신과 자기 자신을 조인한다는 의미이다. 즉, &lt;code class=&quot;language-text&quot;&gt;하나의 테이블을 여러번 복사해서 조인&lt;/code&gt;한다고 생각하면 된다. 자신이 가지고 있는 컬럼을 다양하게 변형시켜 활용할 때 자주 사용된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 테이블 별칭&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 테이블 별칭&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Subquery와 JOIN의 차이&lt;/h3&gt;
+&lt;p&gt;서브쿼리의 경우 메인 쿼리에 종속되는 관계이며 조인은 두 테이블이 평등한 관계이다.&lt;br&gt;
+서브쿼리의 경우 직관적이나 일반적인 상황에선 위와 같은 이유로 조인보다 효율성이 떨어진다.&lt;/p&gt;
+&lt;h2&gt;참고 사이트&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://coding-factory.tistory.com/87&quot;&gt;https://coding-factory.tistory.com/87&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[log4j -> log4j2 변경 중 발생한 이슈]]></title><description><![CDATA[최근에 일어난 log4j 보안 이슈로 기존의  버전으로 마이그레이션을 진행하였다. xml 소스코드를 변경해야 했기에 기존 1버전의 xml를 버전에 맞게 변경하였는데… 예를 들어 아래와 같은 코드로 변경했다고 가정했을 때 (스프링 로깅은 콘솔에서, db…]]></description><link>https://graily0031.github.io/web/log4j_issue/</link><guid isPermaLink="false">https://graily0031.github.io/web/log4j_issue/</guid><pubDate>Wed, 23 Feb 2022 18:56:00 GMT</pubDate><content:encoded>&lt;p&gt;최근에 일어난 log4j 보안 이슈로 기존의 &lt;code class=&quot;language-text&quot;&gt;1.2 에서 2.17.0&lt;/code&gt; 버전으로 마이그레이션을 진행하였다.&lt;br&gt;
+xml 소스코드를 변경해야 했기에 기존 1버전의 xml를 버전에 맞게 변경하였는데…&lt;br&gt;
+예를 들어 아래와 같은 코드로 변경했다고 가정했을 때&lt;br&gt;
+(스프링 로깅은 콘솔에서, db 로깅은 tomcat의 logs 폴더에 저장하는 방식으로 진행했다.)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- log4j2.xml --&gt;&lt;/span&gt;
+&lt;span class=&quot;token prolog&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Configuration&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Appenders&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Console&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;SYSTEM_OUT&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;PatternLayout&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;%d [%t] %-5level %c(%M:%L) - %m%n&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;RollingFile&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;db_file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;../logs/AppLog.log&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+			&lt;span class=&quot;token attr-name&quot;&gt;filePattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;.
+            ./logs/AppLog%d{yyyy-MM-dd}.log&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;PatternLayout&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;RollingFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Appenders&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Loggers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Logger&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;org.springframework&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;additivity&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;false&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;AppenderRef&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Logger&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+         &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Logger&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;co.graily.db1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;additivity&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;false&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;AppenderRef&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;db_file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Logger&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Logger&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;co.graily.db2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;additivity&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;false&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;AppenderRef&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;db_file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Logger&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Root&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;additivity&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;false&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+			&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;appender-ref&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Root&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Loggers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Configuration&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;서버를 재시작하여 테스트했을 때, 로그파일에 로깅을 저장하지 못하는 현상을 발견하였다.&lt;br&gt;
+이에 두 가지 실험을 진행하였는데…&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;h2&gt;This is a header.&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;This is the first list item.&lt;/li&gt;
-&lt;li&gt;This is the second list item.&lt;/li&gt;
+&lt;li&gt;기존 로그파일을 모두 지우고 서버 재시작&lt;/li&gt;
+&lt;li&gt;로그파일 및 콘솔 출력&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Here’s some example code:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; ## This is a header.
-&gt; 1. This is the first list item.
-&gt; 2. This is the second list item.
-&gt;
-&gt; Here&apos;s some example code:
-&gt;
-&gt;     Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue
-
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Blue
-
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Buy flour and salt&lt;/li&gt;
-&lt;li&gt;Mix together with water&lt;/li&gt;
-&lt;li&gt;Bake&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Buy flour and salt
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Mix together with water
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Bake&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Paragraph:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;!-- --&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Paragraph:
-
-    Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* * *
-
-***
-
-*****
-
-- - -
-
----------------------------------------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Example&quot;&gt;an example&lt;/a&gt; link.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.com&quot;&gt;This link&lt;/a&gt; has no title attr.&lt;/p&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is [an example](http://example.com &quot;Example&quot;) link.
-
-[This link](http://example.com) has no title attr.
-
-This is [an example] [id] reference-style link.
-
-[id]: http://example.com &quot;Optional Title&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This paragraph has some &lt;code class=&quot;language-text&quot;&gt;code&lt;/code&gt; in it.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This paragraph has some `code` in it.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://placehold.it/200x50&quot; alt=&quot;Alt Text&quot; title=&quot;Image Title&quot;&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;![Alt Text](https://placehold.it/200x50 &quot;Image Title&quot;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; 1번 실험은 `파일은 생성되나 로깅 저장이 안되고`, 2번 실험의 경우엔 `콘솔에서만 정상적으로 출력`되는 것을 확인했다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;RollingFile&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;db_file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;../logs/AppLog.log&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token attr-name&quot;&gt;filePattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;../logs/AppLog%d{yyyy-MM-dd}.log&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;PatternLayout&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;RollingFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;결론을 먼저 말하자면, &lt;code class=&quot;language-text&quot;&gt;&apos;RollingFile name&apos;&lt;/code&gt;에 포함된 &lt;code class=&quot;language-text&quot;&gt;&apos;_&apos;&lt;/code&gt;(언더바)의 문제인 것으로 확인하였다.
+이전 버전인 1.2에선 정상적으로 작동했었기에 그대로 옮겨간 것이 문제인 듯 했다.&lt;br&gt;
+왜 이 문자가 들어갈 시 로그 파일에 정상적으로 저장이 되지 않는지 이해되지 않았고 관련 정보도 찾을 수 없었다.&lt;br&gt;
+(추후 이와 관련된 새로운 정보가 있다면 수정 할 것)&lt;br&gt;
+해당 이슈때문에 반나절간 삽질한 내 자신에게 치얼스…😓&lt;/p&gt;</content:encoded></item></channel></rss>
