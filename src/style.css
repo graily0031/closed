@@ -260,6 +260,7 @@ a:focus {
 }
 
 .main-heading {
+  padding-left: var(--spacing-0);
   font-size: var(--fontSize-4);
   margin: 0;
 }
