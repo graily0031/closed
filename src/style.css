@@ -255,12 +255,10 @@ a:focus {
   top: var(--spacing-0);
   min-height: var(--spacing-12);
   line-height: var(--spacing-12);
-  padding-left: var(--spacing-4);
   background-color: white;
 }
 
 .main-heading {
-  padding-left: var(--spacing-0);
   font-size: var(--fontSize-4);
   margin: 0;
 }
