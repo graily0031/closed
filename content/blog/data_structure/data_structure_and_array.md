@@ -1,9 +1,9 @@
 ---
-title: "[자료구조] 자료구조 개념과 배열"
+title: "자료구조 개념과 배열"
 date: "2022-02-23T18:56:00.000Z"
 template: "blog"
 draft: false
-slug: "/blog/data_structure_and_array/"
+slug: "/blog/data_structure/"
 category: "data_structure"
 description: "자료구조에 대하여 간략하게 정리하였다."
 ---
