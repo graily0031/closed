@@ -254,6 +254,7 @@ a:focus {
   position: sticky;
   top: var(--spacing-0);
   min-height: var(--spacing-6);
+  background-color: var(--color-accent);
 }
 
 .main-heading {
