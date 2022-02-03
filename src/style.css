@@ -123,13 +123,11 @@ h4,
 h5,
 h6 {
   font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
 }
 
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
 }
 
 h2 {
@@ -206,7 +204,6 @@ li > ul {
 }
 
 blockquote {
-  color: var(--color-text-light);
   margin-left: calc(-1 * var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
@@ -265,7 +262,14 @@ a:focus {
   top: var(--spacing-0);
   min-height: var(--spacing-12);
   line-height: var(--spacing-12);
+}
+
+.light > .global-header {
   background-color: white;
+}
+
+.black > .global-header {
+  background-color: var(--color-background-dark);
 }
 
 .main-heading {
