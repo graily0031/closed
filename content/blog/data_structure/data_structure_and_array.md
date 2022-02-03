@@ -1,5 +1,5 @@
 ---
-title: [자료구조] 자료구조 개념과 배열
+title: "[자료구조] 자료구조 개념과 배열"
 date: "2022-02-23T18:56:00.000Z"
 template: "blog"
 draft: false
