@@ -3,7 +3,7 @@ title: SQL 개념 익히기 - JOIN
 date: "2022-02-03T18:56:00.000Z"
 template: "blog"
 draft: false
-slug: "/blog/sql_join/"
+slug: "/blog/join/"
 category: "sql"
 description: "DB 지식이 부족한 본인을 위한 개념정리"
 ---
