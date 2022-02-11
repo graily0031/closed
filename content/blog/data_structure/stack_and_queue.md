@@ -22,7 +22,7 @@ top을 통해 삽입하는 연산을 `push`, 마찬가지로 top을 통해 삭�
 * 실행 취소(undo)...등등
 
 ### 스택 예시
-``` c++
+```c++
 #include <stdio.h>
 #define MAX_SIZE 5
 
@@ -110,7 +110,7 @@ int main() {
 * 우선순위가 같은 작업의 예약 구현
 
 ### 큐 예시
-``` c++
+```c++
 #include <stdio.h>
 #define MAX_SIZE 5
 
