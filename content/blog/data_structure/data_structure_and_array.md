@@ -1,6 +1,6 @@
 ---
 title: [자료구조] 자료구조 개념과 배열
-date: "2022-02-11T11:54:00.000Z"
+date: "2022-02-11T23:54:00.000Z"
 template: "blog"
 draft: false
 slug: "/blog/data_structure_and_array/"
