@@ -1,142 +1,467 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Gatsby Starter Blog RSS Feed]]></description><link>https://graily0031.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Feb 2022 10:31:50 GMT</lastBuildDate><item><title><![CDATA[C언어 포인터]]></title><description><![CDATA[Pointer…]]></description><link>https://graily0031.github.io/C_lang/cLang_pointer/</link><guid isPermaLink="false">https://graily0031.github.io/C_lang/cLang_pointer/</guid><pubDate>Wed, 23 Feb 2022 18:56:00 GMT</pubDate><content:encoded>&lt;h2&gt;Pointer&lt;/h2&gt;
-&lt;p&gt;포인터도 일종의 &lt;code class=&quot;language-text&quot;&gt;변수&lt;/code&gt;이다. (변수와 같이 선언한 변수 타입에 따라) 특정한 데이터가 들어간다. 포인터는 그 특정 데이터가 저장된 &lt;code class=&quot;language-text&quot;&gt;주소값&lt;/code&gt;을 보관하는 변수이다.&lt;br&gt;
-포인터의 정의는 &lt;code class=&quot;language-text&quot;&gt;포인터에 주소값이 저장되는 데이터 타입* 포인터명&lt;/code&gt; (데이터의 주소값을 저장하는 변수를 정의) 혹은 단항일 경우엔 &lt;code class=&quot;language-text&quot;&gt;*포인터명&lt;/code&gt;이다. &lt;code class=&quot;language-text&quot;&gt;곱셈 연산자&lt;/code&gt;가 아니다. 곱셈연산자와 달리 포인터 정의하는 연산자는 &lt;code class=&quot;language-text&quot;&gt;1개의 피연산자&lt;/code&gt;를 필요로 한다.&lt;br&gt;
-포인터를 정의한 뒤 값을 넣어야 할 때 &lt;code class=&quot;language-text&quot;&gt;&amp;amp; 연산자&lt;/code&gt;를 이용한다. &lt;code class=&quot;language-text&quot;&gt;피연산자가 2개 들어가는 AND연산자&lt;/code&gt;와 달리 &lt;code class=&quot;language-text&quot;&gt;1개의 피연산자&lt;/code&gt;가 필요한다 &lt;code class=&quot;language-text&quot;&gt;&amp;amp;주소값을 계산할 데이터&lt;/code&gt;이렇게 정의하여 사용한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;#&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;stdio&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;h&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;// 포인터 선언&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;c&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;d&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;포인터 장점 및 단점&lt;/h3&gt;
-&lt;h4&gt;장점&lt;/h4&gt;
-&lt;p&gt;포인터 변수는 4byte의 주소만 가지게 된다. 함수의 인자로 넘길경우 메모리 복사도 4byte 만큼만 일어나게 된다. 클래스 같이 큰 객체도 포인터형으로 전달될 경우 해당 메모리의 첫번째 주소값이 넘어가기 때문에 &lt;code class=&quot;language-text&quot;&gt;불필요한 메모리 복사가 일어나지 않게 된다.&lt;/code&gt;&lt;br&gt;
-주소를 컨트롤 하므로 원본에 대한 값 변경이 용이하다. 데이터에 대한 접근이 빨라 처리속도가 나쁘지 않다.&lt;br&gt;
-배열로 생성할 수 없는 데이터를 생성할 수 있다.&lt;/p&gt;
-&lt;h4&gt;단점&lt;/h4&gt;
-&lt;p&gt;Null 포인터에 직접 접근 등의 &lt;code class=&quot;language-text&quot;&gt;예외&lt;/code&gt;에 대한 처리가 확실치 않는 경우 예기치 못한 문제가 발생할 수 있다. 또하누 오류를 범하거나 기교적인 프로그램이 되기 쉽다.&lt;br&gt;
-주소를 직접 참조하기 때문에 의도치 않게 원본 값이 수정될 수 있고 선언만 하고 초기화 하지 않을 시 쓰레기 주소를 가리킨다.&lt;br&gt;
-메모리 절대 번지 접근시 시스템 오류를 초래한다.&lt;/p&gt;
-&lt;h2&gt;배열과 포인터&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Gatsby Starter Blog RSS Feed]]></description><link>https://graily0031.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Feb 2022 15:03:44 GMT</lastBuildDate><item><title><![CDATA[자료구조 개념과 배열]]></title><description><![CDATA[…]]></description><link>https://graily0031.github.io/data_structure/data_structure_and_array/</link><guid isPermaLink="false">https://graily0031.github.io/data_structure/data_structure_and_array/</guid><pubDate>Sat, 12 Feb 2022 23:56:00 GMT</pubDate><content:encoded>&lt;h2&gt;자료구조&lt;/h2&gt;
+&lt;h3&gt;자료의 정의&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;자료&lt;/code&gt;는 현실 세계에 관찰이나 측정을 통해 수집된 &lt;code class=&quot;language-text&quot;&gt;값(value)&lt;/code&gt;이나 &lt;code class=&quot;language-text&quot;&gt;사실(fact)&lt;/code&gt;을 의미한다. 우리 생활에서 실제로 만질 수 있거나 볼 수 있는 것 (즉 길이, 무게, 부피 등을 측정할수 있는 대상)에 대해 물리적인 단위로 표현하여 얻어낼 수 있는 내용들을 의미한다.&lt;/p&gt;
+&lt;h3&gt;정보의 정의&lt;/h3&gt;
+&lt;p&gt;어떤 상황에 대해 적절한 의사결정을 할 수 있게 해주는 지식으로써 자료의 유효한 해설이나 자료 상호간의 관계를 표현하는 내용&lt;br&gt;
+어떤 상황에 적절한 경정이나 판단에 사용될 수 있는 처리형태로 가공되거나 분류되기 위해 &lt;code class=&quot;language-text&quot;&gt;처리 과정&lt;/code&gt;을 거쳐서 정의되고 정돈된 &lt;code class=&quot;language-text&quot;&gt;자료&lt;/code&gt;의 2차 처리 결과물을 의미한다.&lt;/p&gt;
+&lt;h3&gt;추상화&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;공통적인 개념&lt;/code&gt;을 이용해 같은 종류의 &lt;code class=&quot;language-text&quot;&gt;다양한 객체를 정의하는 것&lt;/code&gt;을 의미한다. 추상화를 통해 간결하게 말하는 &lt;code class=&quot;language-text&quot;&gt;사람의 의사&lt;/code&gt;를 전달할 수 있게되는 것&lt;/p&gt;
+&lt;h4&gt;자료의 추상화&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;배열은 간단하게 말하자면 같은 타입의 변수들의 집합이다.&lt;br&gt;
-언뜻 같은 듯 하지만 배열과 포인터는 완전히 같지 않다.&lt;/p&gt;
+&lt;p&gt;다양한 객체를 컴퓨터에 표현하고 활용하기 위해 필요한 자료의 구조에 대해 &lt;code class=&quot;language-text&quot;&gt;공통적 특징&lt;/code&gt;만을 뽑아 정의한 것이다.&lt;br&gt;
+자료의 추상화에는 컴퓨터 내부의 이진수 표현 방법, 저장 위치 등은 포함되지 않고 단순히 개발자의 머릿속에 그림을 그리는 것 처럼 개념화하는 것이다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;배열은 그 자체가 크기 때문에 함수 인자로 전달할 수 없다. 하여 &lt;code class=&quot;language-text&quot;&gt;배열을 함수로 전달할 때 반드시 포인터를 사용&lt;/code&gt;해야 한다.&lt;br&gt;
-동작의 속도 차이가 있는데, 배열은 배열 선두부터 출발하지만 포인터의 경우 대상체로 직접 이동해서 읽으므로 포인터의 액세스 속도가 빠르다. &lt;code class=&quot;language-text&quot;&gt;*p&lt;/code&gt;는 p가 가리키는 곳을 바로 읽을 수 있는데 비해 배열은&lt;code class=&quot;language-text&quot;&gt;(array[i]) *(array+i)&lt;/code&gt; 이렇게 번지를 더한 후 읽어야 하므로 포인터보다 느릴 수 있겠다.&lt;br&gt;
-&lt;code class=&quot;language-text&quot;&gt;배열은 상수&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;포인터는 변수&lt;/code&gt;이다. 포인터는 고유의 메모리를 차지하며 언제든 다른 대상을 가리킬 수 있으나 배열은 이미 해당 위치가 고정되어 있어 다른 대상을 가리킬 수 없으며 배열은 오직 배열의 선두 번지를 읽을 수 있다. 선언할 때 크기 지정도 &lt;code class=&quot;language-text&quot;&gt;배열&lt;/code&gt;의 경우 &lt;code class=&quot;language-text&quot;&gt;선언시 정적으로 결정&lt;/code&gt;되어야 하나 &lt;code class=&quot;language-text&quot;&gt;포인터&lt;/code&gt;는 &lt;code class=&quot;language-text&quot;&gt;동적으로 선언&lt;/code&gt;할 수 있다. 만일 가변길이 배열이 필요한 경우 int*형의 포인터 변수를 선언한 뒤 malloc으로 할당해 사용하여야 한다. 포인터로 할당한 배열은 실행 중에라도 realloc으로 크기를 재 할당해 변경할 수 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[SQL 개념 익히기 - JOIN]]></title><description><![CDATA[JOIN JOIN…]]></description><link>https://graily0031.github.io/sql/join/</link><guid isPermaLink="false">https://graily0031.github.io/sql/join/</guid><pubDate>Wed, 23 Feb 2022 18:56:00 GMT</pubDate><content:encoded>&lt;h2&gt;JOIN&lt;/h2&gt;
-&lt;h3&gt;JOIN이란?&lt;/h3&gt;
-&lt;p&gt;두개 이상의 테이블을 결합하여 데이터를 검색하는 방법&lt;br&gt;
-즉 두개의 테이블을 하나의 테이블인 것 처럼 보여지게 한다.&lt;br&gt;
-보통 &lt;code class=&quot;language-text&quot;&gt;Primary key&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;Foreign key&lt;/code&gt;를 활용하여 테이블을 연결한다.
-사용 조건은 두개의 테이블 중 적어도 하나의 공통된 컬럼이 존재하여야 하며 해당 컬럼의 값은 공유되어야 한다.&lt;/p&gt;
-&lt;h3&gt;JOIN 종류&lt;/h3&gt;
-&lt;h4&gt;INNER JOIN&lt;/h4&gt;
-&lt;p&gt;교집합 개념의 JOIN, 기준 테이블과 JOIN 한 테이블의 중복값을 출력한다.&lt;br&gt;
-즉 두 테이블이 모두 가지고 있는 데이터만 검색이 가능하다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
-    테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
-&lt;span class=&quot;token keyword&quot;&gt;INNER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭 &lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; 기준테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;기준키 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 조인테이블별칭 기준키&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;LEFT OUTER JOIN&lt;/h4&gt;
-&lt;p&gt;기준 테이블 값 + 테이블과 기준 테이블의 중복된 값이다.&lt;br&gt;
-(왼쪽 테이블)  + (오른쪽) &lt;code class=&quot;language-text&quot;&gt;(왼쪽 테이블 기준으로 JOIN)&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
-&lt;span class=&quot;token keyword&quot;&gt;LEFT&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;OUTER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭 &lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; 기준테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;기준키 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 조인테이블별칭 기준키&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;RIGHT OUTER JOIN&lt;/h4&gt;
-&lt;p&gt;LEFT OUTER JOIN의 반대개념이다.&lt;br&gt;
-&lt;code class=&quot;language-text&quot;&gt;우측 테이블이 기준&lt;/code&gt; 테이블이고 기준 테이블 기준으로 &lt;code class=&quot;language-text&quot;&gt;우측 테이블과 좌측 테이블의 중복된 값&lt;/code&gt;이 검색된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
-&lt;span class=&quot;token keyword&quot;&gt;RIGHT&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;OUTER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭 &lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; 기준테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;기준키 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 조인테이블별칭 기준키&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;FULL OUTER JOIN&lt;/h4&gt;
-&lt;p&gt;합집합의 개념이다. 좌측 및 우측 테이블이 가지고 있는 데이터 모두 검색된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
-&lt;span class=&quot;token keyword&quot;&gt;FULL&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;OUTER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭 &lt;span class=&quot;token keyword&quot;&gt;ON&lt;/span&gt; 기준테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;기준키 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 조인테이블별칭 기준키&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;CROSS JOIN&lt;/h4&gt;
-&lt;p&gt;모든 경우의 수를 전부 표현해주는 방식이다.&lt;br&gt;
-한 쪽 테이블의 모든 행과 다른 테이블의 모든 행을 조인하여 검색된다. &lt;code class=&quot;language-text&quot;&gt;(논리곱 개념)&lt;/code&gt;&lt;br&gt;
-예를 들어 테이블1 데이터 5개 테이블2 데이터 4개가 있다면 총 20개가 검색되어 나온다.&lt;br&gt;
-데이터 양에 따라 용량이 초과되거나 서버가 다운될 수 있다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭
-&lt;span class=&quot;token keyword&quot;&gt;CROSS&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;JOIN&lt;/span&gt; 조인테이블 별칭
+&lt;h3&gt;자료구조의 개념&lt;/h3&gt;
+&lt;p&gt;추상화를 통해 알고리즘에서 사용할 자료의 논리적 관계를 구조화한 것&lt;br&gt;
+자료의 추상화와 구조화가 적절히 이루어지지 못하면 소프트웨어는 비효율 적으로 수행되거나 소프트웨어의 확장성에 문제가 생길 수 있다.&lt;/p&gt;
+&lt;h4&gt;자료구조와 알고리즘의 관계&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;자료구조는 &lt;code class=&quot;language-text&quot;&gt;입력 자료에 대한 추상화&lt;/code&gt;된 상태라면 알고리즘은 컴퓨터가 수행해야 할 &lt;code class=&quot;language-text&quot;&gt;명령어의 추상화&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    자료구조----------&gt;컴퓨터----------&gt;출력
+                        ^
+                     알고리즘&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;자료구조와 알고리즘의 추상화 및 구체화&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;입력값을 머릿속에서 추상화된 형태(&lt;code class=&quot;language-text&quot;&gt;자료구조&lt;/code&gt;)로 구조화 하고,&lt;br&gt;
+수행되어야 할 명령어를 머릿속에서 추상화된 형태(&lt;code class=&quot;language-text&quot;&gt;알고리즘&lt;/code&gt;)로 체계회 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    자료구조----------&gt;컴퓨터----------&gt;출력
+                        ^
+                     프로그램
+                        ^
+                     알고리즘&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;알고리즘의 개념&lt;/h3&gt;
+&lt;p&gt;컴퓨터에게 일을 시키는 &lt;code class=&quot;language-text&quot;&gt;명령어의 연속된 덩어리&lt;/code&gt;이다.&lt;br&gt;
+컴퓨터에 의해 수행되기 위해 필요한 &lt;code class=&quot;language-text&quot;&gt;명령어의 유한 집합&lt;/code&gt;이 &lt;code class=&quot;language-text&quot;&gt;사람의 머릿속에 추상화&lt;/code&gt;되어 존재하는 것이다.&lt;br&gt;
+사람이 컴퓨터에게 일을 시키기 위해 사람의 의도와 명령을 전달하기 위한 방법이다. (언어 및 글)&lt;/p&gt;
+&lt;h4&gt;알고리즘의 조건&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;출력, 유효성, 입력, 명확성, 유한성&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;알고리즘의 실행시간 분석&lt;/h3&gt;
+&lt;p&gt;알고리즘을 실행하는 데 필요한 &lt;code class=&quot;language-text&quot;&gt;예측 시간을 측정&lt;/code&gt;하여 알고리즘의 성능을 분석한다.&lt;/p&gt;
+&lt;h4&gt;실행 시간의 예측&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;알고리즘의 실행 횟수를 &lt;code class=&quot;language-text&quot;&gt;O(n)&lt;/code&gt;이라고 표현한다.&lt;br&gt;
+같은 O(n)을 가진다는 것은 실행 시간이 동일한 것이 아닌 실행 시간의 증가 경향이 유사하다는 의미이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;알고리즘의 성능 분석&lt;/h3&gt;
+&lt;p&gt;컴퓨터와 &lt;code class=&quot;language-text&quot;&gt;실제로 프로그램을 실행하는 데 걸리는 시간을 측정&lt;/code&gt;하여 알고리즘의 성능을 측정한다.&lt;/p&gt;
+&lt;h4&gt;실행 시간의 측정&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;실제로 실행 시간을 시계로 잰다는 것을 의미한다. 실제로 실행될 수 있는 프로그램이 있어야 하며, 시스템 시계를 이용한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;배열&lt;/h2&gt;
+&lt;p&gt;일정한 차례나 간격에 따라 벌여 놓는다. -&gt; 사전적 정의&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;차례 (순서)&lt;/code&gt;와 관련된 기본적인 자료구조이고 인덱스와 원소값 즉 index, value의 쌍으로 구성된 집합을 의미한다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;원소의 메모리 공간 (메인 메모리, DDR)의 물리적인 위치를 순서적으로 결정하는 특징을 가지고 있으며, 배열의 순서는 메모리 공간에서 저장되는 원소 값의 물리적 순서를 갖고 있다&lt;/code&gt;&lt;br&gt;
+쉽게 설명하자면 &lt;code class=&quot;language-text&quot;&gt;호수 (index)&lt;/code&gt;로 표현되는 &lt;code class=&quot;language-text&quot;&gt;순서&lt;/code&gt;를 갖는 &lt;code class=&quot;language-text&quot;&gt;아파트(메모리 영역, 원소값을 위한 저장소) 원소&lt;/code&gt;들이 모두 &lt;code class=&quot;language-text&quot;&gt;같은 자료형&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;같은 크기의 기억 공간&lt;/code&gt;을 가진다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;인덱스 값은 추상화된 값이다. 즉 &lt;code class=&quot;language-text&quot;&gt;컴퓨터의 내부구조&lt;/code&gt;나 &lt;code class=&quot;language-text&quot;&gt;메모리 주소와&lt;/code&gt; 무관하게 개발자에게 개념적으로 정의된다.&lt;br&gt;
+메모리 주소값은 &lt;code class=&quot;language-text&quot;&gt;실제 메모리의 물리적인 위치값(주소값)&lt;/code&gt;을 의미한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;배열의 추상 자료형&lt;/h3&gt;
+&lt;h4&gt;추상 자료형과 자료형&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;추상 자료형 -&gt; 객체 및 관련된 연상의 정의&lt;br&gt;
+자료형      -&gt; 메모리 저장 할당을 위한 선언&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;ADT Array 객체&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#x3C;i ∈ Index, i ∈ Element&gt; 쌍들의 집합을 의미한다.&lt;br&gt;
+Index - 순서를 나타내는 원소의 유한집합&lt;br&gt;
+Element - 타입이 같은 원소의 집합&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;연산 -&gt; a ∈ Array; a ∈ Index; item ∈ Element; n ∈ Integer인 모든 a, itme, n에 대하여 다음과 같은 연산이 정의된다.&lt;br&gt;
+a : 0개 이상의 원소를 갖는 배열&lt;br&gt;
+item : 배열에 저장되는 원소&lt;br&gt;
+n : 배열의 최대 크기를 정의하는 정수값&lt;br&gt;
+Array create(n) ::= 배열의 크기가 n인 빈 배열을 생성하고 배열을 반환한다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;Element retrieve(a, i) ::= if (i ∈ Index) them { 배열의 i번째에 해당하는 원소값 &apos;e&apos;를 반환한다; } else { 에로 메시지를 반환한다; }   &lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;/* 배열의 생성 */
 
-&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt;
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할칼럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할칼럼
-&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 기준테이블 별칭&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;조인테이블 별칭&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;SELF JOIN&lt;/h4&gt;
-&lt;p&gt;자기 자신과 자기 자신을 조인한다는 의미이다. 즉, &lt;code class=&quot;language-text&quot;&gt;하나의 테이블을 여러번 복사해서 조인&lt;/code&gt;한다고 생각하면 된다. 자신이 가지고 있는 컬럼을 다양하게 변형시켜 활용할 때 자주 사용된다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;SELECT&lt;/span&gt; 
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-   테이블별칭&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;조회할컬럼&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; 테이블 별칭&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 테이블 별칭&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Subquery와 JOIN의 차이&lt;/h3&gt;
-&lt;p&gt;서브쿼리의 경우 메인 쿼리에 종속되는 관계이며 조인은 두 테이블이 평등한 관계이다.&lt;br&gt;
-서브쿼리의 경우 직관적이나 일반적인 상황에선 위와 같은 이유로 조인보다 효율성이 떨어진다.&lt;/p&gt;
-&lt;h2&gt;참고 사이트&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://coding-factory.tistory.com/87&quot;&gt;https://coding-factory.tistory.com/87&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[log4j -> log4j2 변경 중 발생한 이슈]]></title><description><![CDATA[최근에 일어난 log4j 보안 이슈로 기존의  버전으로 마이그레이션을 진행하였다. xml 소스코드를 변경해야 했기에 기존 1버전의 xml를 버전에 맞게 변경하였는데… 예를 들어 아래와 같은 코드로 변경했다고 가정했을 때 (스프링 로깅은 콘솔에서, db…]]></description><link>https://graily0031.github.io/web/log4j_issue/</link><guid isPermaLink="false">https://graily0031.github.io/web/log4j_issue/</guid><pubDate>Wed, 23 Feb 2022 18:56:00 GMT</pubDate><content:encoded>&lt;p&gt;최근에 일어난 log4j 보안 이슈로 기존의 &lt;code class=&quot;language-text&quot;&gt;1.2 에서 2.17.0&lt;/code&gt; 버전으로 마이그레이션을 진행하였다.&lt;br&gt;
-xml 소스코드를 변경해야 했기에 기존 1버전의 xml를 버전에 맞게 변경하였는데…&lt;br&gt;
-예를 들어 아래와 같은 코드로 변경했다고 가정했을 때&lt;br&gt;
-(스프링 로깅은 콘솔에서, db 로깅은 tomcat의 logs 폴더에 저장하는 방식으로 진행했다.)&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- log4j2.xml --&gt;&lt;/span&gt;
-&lt;span class=&quot;token prolog&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Configuration&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Appenders&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Console&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;SYSTEM_OUT&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;PatternLayout&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;%d [%t] %-5level %c(%M:%L) - %m%n&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;RollingFile&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;db_file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;../logs/AppLog.log&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-			&lt;span class=&quot;token attr-name&quot;&gt;filePattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;.
-            ./logs/AppLog%d{yyyy-MM-dd}.log&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-			&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;PatternLayout&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;RollingFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Appenders&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Loggers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Logger&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;org.springframework&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;additivity&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;false&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;AppenderRef&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Logger&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-         &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Logger&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;co.graily.db1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;additivity&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;false&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;AppenderRef&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;db_file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Logger&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Logger&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;co.graily.db2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;additivity&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;false&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-            &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;AppenderRef&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;db_file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Logger&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Root&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;level&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;additivity&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;false&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-			&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;appender-ref&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-		&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Root&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Loggers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Configuration&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;서버를 재시작하여 테스트했을 때, 로그파일에 로깅을 저장하지 못하는 현상을 발견하였다.&lt;br&gt;
-이에 두 가지 실험을 진행하였는데…&lt;/p&gt;
+void create(int*a, int n) {	// n = 5
+	int i;
+    for(i = 0, i &amp;lt; n; i++) {
+    	a[i] = 0;
+    }
+}
+
+/*      실행 결과
+	a[0]	a[1]	a[2]	a[3]	a[4]
+a	[ 0 ]	[ 0 ]	[ 0 ]	[ 0 ]	[ 0 ]	
+*/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;// 배열값의 검색 (retrieve 연산)
+
+#define ARRAY_SIZE 5
+
+int retrieve(int *a, int i) {	// i = 2
+	
+    if(i &amp;gt;= 0 &amp;amp;&amp;amp; i &amp;lt; ARRAY_SIZE) {
+    	return a[i];
+	}
+	else {
+		printf(&amp;quot;Error\n&amp;quot;);
+    	return (-1);
+	}
+}
+
+/*      실행 결과
+                    -------
+	a[0]	a[1]	a[2]	a[3]	a[4]
+a	[ 10 ]	[ 20 ]	[ 30 ]	[ 40 ]	[ 50 ]	
+			        -------
+                    ---&amp;gt;출력
+*/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;
+#define ARRAY_SIZE 5
+
+int store(int *a, int i, int e) {	// i = 2, e = 35
+	
+    if(i &amp;gt;= 0 &amp;amp;&amp;amp; i &amp;lt; ARRAY_SIZE) {
+    	a[i] = e;
+	}
+	else {
+		printf(&amp;quot;Error\n&amp;quot;);
+	}
+}
+
+/*      실행 결과
+                       		-------
+	a[0]	a[1]	a[2]	a[3]	a[4]
+a	[ 10 ]	[ 20 ]	[ 30 ]	[ 40 ]	[ 50 ]	
+			                -------
+                              ▽
+                              ▽
+                       		-------
+	a[0]	a[1]	a[2]	a[3]	a[4]
+a	[ 10 ]	[ 20 ]	[ 30 ]	[ 35 ]	[ 50 ]	
+			                -------                  
+*/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;1차원 배열의 정의&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;기존 로그파일을 모두 지우고 서버 재시작&lt;/li&gt;
-&lt;li&gt;로그파일 및 콘솔 출력&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;한 줄 짜리 배열의 의미하며, 하나의 인덱스로 구분된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;A[i]&lt;/code&gt;는 배열의 첫 번째 원소 &lt;code class=&quot;language-text&quot;&gt;A[0]&lt;/code&gt;이 저장된 주소인 &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt;로부터 시작하여, &lt;code class=&quot;language-text&quot;&gt;A[0]부터 A[i - 1]개까지&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;i&lt;/code&gt;개의 배열 &lt;code class=&quot;language-text&quot;&gt;A[]&lt;/code&gt;를 지나서 저장된다.&lt;br&gt;
+따라서, &lt;code class=&quot;language-text&quot;&gt;A[]&lt;/code&gt;의 시작주소를 &lt;code class=&quot;language-text&quot;&gt;a&lt;/code&gt;라고 가정하면, &lt;code class=&quot;language-text&quot;&gt;A[i]&lt;/code&gt; 저장 주소는 &lt;code class=&quot;language-text&quot;&gt;[a + i * k]&lt;/code&gt;가 된다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;1번 실험은 &lt;code class=&quot;language-text&quot;&gt;파일은 생성되나 로깅 저장이 안되고&lt;/code&gt;
-2번 실험의 경우엔 &lt;code class=&quot;language-text&quot;&gt;콘솔에서만 정상적으로 출력&lt;/code&gt;되는 것을 확인했다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;xml&quot;&gt;&lt;pre class=&quot;language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;RollingFile&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;db_file&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;../logs/AppLog.log&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-	&lt;span class=&quot;token attr-name&quot;&gt;filePattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;../logs/AppLog%d{yyyy-MM-dd}.log&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-	&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;PatternLayout&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;pattern&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;RollingFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;결론을 먼저 말하자면, &lt;code class=&quot;language-text&quot;&gt;&apos;RollingFile name&apos;&lt;/code&gt;에 포함된 &lt;code class=&quot;language-text&quot;&gt;&apos;_&apos;&lt;/code&gt;(언더바)의 문제인 것으로 확인하였다.
-이전 버전인 1.2에선 정상적으로 작동했었기에 그대로 옮겨간 것이 문제인 듯 했다.&lt;br&gt;
-왜 이 문자가 들어갈 시 로그 파일에 정상적으로 저장이 되지 않는지 이해되지 않았고 관련 정보도 찾을 수 없었다.&lt;br&gt;
-(추후 이와 관련된 새로운 정보가 있다면 수정 할 것)&lt;br&gt;
-해당 이슈때문에 반나절간 삽질한 내 자신에게 치얼스…😓&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;A[0]	A[1]	A[2]	A[3]	A[4]
+-------------------------------------
+A(L)	A(L+1)	A(L+2)	A(L+3)	A(U)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;배열의 확장&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;행렬을 컴퓨터에서 표현하기에는 2차원 배열이 적합하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;5	2	6	2
+7	2	0	0
+0	1	1	9&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;Column 열, 세로
+row    행, 가로
+
+A[0][0]		A[0][1]		A[0][2]		.......		.......		A[0][m-1]
+A[1][0]		.......		.......		.......		.......		.......
+A[2][0]		.......		.......		.......		.......		.......
+.......		.......		.......		.......		.......		.......
+A[n-1][0]	.......		.......		.......		.......		A[n-1][m-1]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;열 우선 배열&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1차원 배열을 여러 개 세워 놓은 것이 2차원 배열이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;A[0]		A[1]		A[2]		A[3]		A[4]
+ □		      □		      □		      □		      □	        B[0]
+ □		      □		      □		      □		      □	        B[1]
+ □		      □		      □		      □		      □	        B[2]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;행 우선 할당&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;가로의 1차원 배열 단위로 메모리 영역을 우선 할당한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;	A[2,3]
+    
+   	0	1	2
+0	●	●	●   ----&amp;gt; ⓐ
+1	□	□	□
+
+..................
+    ●	[0,0]		   |
+    ●	[0,1]	0행	   | ⓐ
+    ●	[0,2]		   ↓
+  ----------------
+    □	[1,0]
+    □	[1,1]	1행
+    □	[1,2]
+ 
+ /* 행 우선 */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;열 우선 할당&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;세로의 1차원 배열 단위로 메모리 영역을 우선 할당한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;	A[2,3]    
+ 
+   	0	1	2
+0	●	□	▼   
+1	●	□	▼
+
+..................
+    ●	[0,0]	0행	   |
+    ●	[1,0]	0행	   | ⓐ
+-------------------
+    □	[0,1]	1행	   ↓
+    □	[1,1]	1행
+-------------------
+    ▼	[0,2]	2행
+    ▼	[1,2]	2행
+ 
+ /* 열 우선  */&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;c언어에서의 2차원 배열 -&gt; 행 우선 순서 저장&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;예를 들어 c언어에서 &lt;code class=&quot;language-text&quot;&gt;A[5][3]&lt;/code&gt;을 선언하면 다음과 같은 배열이 생성된다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;/* 배열의 길이 선언 -&amp;gt; A[5][3] */      
+----------------- 인덱스 번호 -----------------
+//▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+	[0][0]	[0][1]	[0][2]	[0][3]	[0][4]
+//▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+	[1][0]	[1][1]	[1][2]	[1][3]	[1][4]
+//○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+//▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+	[2][0]	[2][1]	[2][2]	[2][3]	[2][4]
+//▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;희소 행렬의 개념&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;원소 값이 0인 원소가 그렇지 않은 원소보다 상대적으로 많다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;A = [	]
+      ↓
+-----------------------------------------
+|	0	20	0	0	9	0	0	11	0	|
+-----------------------------------------
+|	0	0	0	0	0	0	0	0	0	|
+-----------------------------------------
+|	78	0	0	0	0	0	0	0	0	|
+-----------------------------------------
+|	0	0	0	0	67	0	0	0	0	|
+-----------------------------------------
+|	0	31	0	0	0	0	0	0	0	|
+-----------------------------------------
+|	0	0	0	91	0	0	44	0	0	|
+-----------------------------------------
+|	0	0	0	0	0	0	0	0	0	|
+-----------------------------------------
+|	0	0	0	0	19	0	0	27	0	|
+-----------------------------------------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;희소 행렬의 일반적인 배열 표현&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;메모리 낭비를 막고 효율성을 높이기 위해 0인 원소는 저장하지 않고 0이 아닌 값만을 따로 모아 저장하는 방법이 필요하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;	|	[0] 	[1] 	[2] 	[3] 	[4] 	[5] 	[6] 	[7] 	[8]	
+//	-------------------------------------------------------------------------
+[0]	|	0	    20	     0	     0	     9	     0	     0	     11	     0	|
+	-------------------------------------------------------------------------
+[1]	|	0	     0	     0	     0	     0	     0	     0	     0	     0	|
+//	-------------------------------------------------------------------------
+[2]	|	78	     0	     0	     0	     0	     0	     0	     0	     0	|
+//	-------------------------------------------------------------------------
+[3]	|	0	     0	     0	     0	     67	     0	     0	     0	     0	|
+//	-------------------------------------------------------------------------
+[4]	|	0	     31	     0	     0	     0	     0	     0	     0	     0	|
+//	-------------------------------------------------------------------------
+[5]	|	0	     0	     0	     91	     0	     0	     44	     0	     0	|
+//	-------------------------------------------------------------------------
+[6]	|	0	     0	     0	     0	     0	     0	     0	     0	     0	|
+//	-------------------------------------------------------------------------
+[7]	|	0	     0	     0	     0	     19 	 0	     0	     27	     0	|
+//	-------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;
+		행		열		값		
+	-------------------------
+0	|	8	|	9	|	10	|
+	-------------------------
+1	|	0	|	1	|	20	|
+2	|	0	|	4	|	9	|
+3	|	0	|	7	|	11	|
+4	|	2	|	0	|	78	|
+5	|	3	|	4	|	67	|
+6	|	4	|	1	|	31	|
+7	|	5	|	3	|	91	|
+8	|	5	|	6	|	44	|
+9	|	7	|	4	|	19	|
+10	|	7	|	7	|	27	|&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[스택(stack) & 큐(queue)]]></title><description><![CDATA[스택 (stack) 스택이란 쌓아올린다는 것을 의미하며, 원반 던지기 하듯 차곡차곡 쌓아올린 형태의 자료 구조를 의미한다. 같은 구조와 크기의 자료를 정해진 방향으로만 쌓을 수 있고 top…]]></description><link>https://graily0031.github.io/data_structure/stack_and_queue/</link><guid isPermaLink="false">https://graily0031.github.io/data_structure/stack_and_queue/</guid><pubDate>Sat, 12 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;스택 (stack)&lt;/h2&gt;
+&lt;p&gt;스택이란 쌓아올린다는 것을 의미하며, 원반 던지기 하듯 차곡차곡 쌓아올린 형태의 자료 구조를 의미한다.&lt;br&gt;
+같은 구조와 크기의 자료를 정해진 방향으로만 쌓을 수 있고 top으로 정한 곳을 통해서만 접근할 수 있다. (쉽게 말해 입구가 하나밖에 없다 생각하면 쉽다.)&lt;br&gt;
+top에는 가장 최근에 들어온 자료를 가리키고 있고 새 자료를 넣을 때 top이 가리키는 자료의 위에 쌓이게 된다. 삭제할 때 마찬가지로 top을 통해 가장 최근에 넣은 자료 먼저 삭제된다.&lt;br&gt;
+top을 통해 삽입하는 연산을 &lt;code class=&quot;language-text&quot;&gt;push&lt;/code&gt;, 마찬가지로 top을 통해 삭제하는 연산을 &lt;code class=&quot;language-text&quot;&gt;pop&lt;/code&gt;이라 한다. 이러한 스택의 구조를 &lt;code class=&quot;language-text&quot;&gt;후입 선출&lt;/code&gt; 구조라 하며 줄여서 &lt;code class=&quot;language-text&quot;&gt;LIFO(last in first out)&lt;/code&gt;이라 부른다.&lt;br&gt;
+만일 스택 저장공간에 데이터가 없는데 프로그램이 스택에서 데이터를 꺼내려고 할 경우 &lt;code class=&quot;language-text&quot;&gt;stack underflow&lt;/code&gt; 현상이 일어나게 되며, 반대로 스택 저장공간이 가득찼을 때 하나의 데이터를 더 넣고자 할 경우 &lt;code class=&quot;language-text&quot;&gt;stack overflow&lt;/code&gt; 현상이 일어나게 된다. 이 두 현상은 프로그램에 오류를 야기하게 된다.&lt;/p&gt;
+&lt;h3&gt;스택 활용 예&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;웹 브라우저 뒤로가기&lt;/li&gt;
+&lt;li&gt;역순 문자열 만들기&lt;/li&gt;
+&lt;li&gt;후위 표기법 계산&lt;/li&gt;
+&lt;li&gt;실행 취소(undo)…등등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;스택 예시&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#define MAX_SIZE 5
+
+
+int stack[MAX_SIZE];
+int top = 0;
+
+
+void push(int val) {
+	if(top &amp;gt;= MAX_SIZE)
+	{
+		printf(&amp;quot;----overflow----&amp;quot;);
+	}
+	else
+	{
+		stack[top] = val;
+		top ++;
+	}
+}
+
+void pop() {
+	if (top == 0)
+	{
+		printf(&amp;quot;----underflow&amp;quot;);
+	}
+	else
+	{
+		printf(&amp;quot;pop_%d\n&amp;quot;, stack[top - 1]);
+		stack[top - 1] = 0;
+		top--;
+	}
+}
+
+void show() {
+	int n;
+	printf(&amp;quot;스택----------\n&amp;quot;);
+	for(n = 0; n &amp;lt; MAX_SIZE; n++)printf(&amp;quot;%d\t&amp;quot;, stack[n]);
+	
+	printf(&amp;quot;\n&amp;quot;);
+}
+
+int main() {
+	int act = 0;
+	int data;
+	
+	printf(&amp;quot;명령어를 입력하세요\n&amp;quot;);
+	printf(&amp;quot;1.push\t 2.pop\t 3.exit \n&amp;quot;);
+	scanf(&amp;quot;%d&amp;quot;, &amp;amp;act);
+	
+	switch(act)
+	{
+		case 1:
+			printf(&amp;quot;insert push val : &amp;quot;);
+			scanf(&amp;quot;%d&amp;quot;, &amp;amp;data);
+			push(data);
+			break;
+		
+		case 2:
+			pop();
+			break;
+			
+		case 3:
+			act = 4;
+			break;
+			
+		default:
+			break;
+	}
+	show();
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;큐 (queue)&lt;/h2&gt;
+&lt;p&gt;큐는 예를 들어 은행의 번호표를 생각하면 쉽다. 창구에선 가장 먼저 번호표를 뽑은 사람의 업무를 처리해주는 것 처럼 선입선출 방식 즉 줄여서 &lt;code class=&quot;language-text&quot;&gt;FIFO(first in first out)&lt;/code&gt;방식의 자료구조이다.&lt;br&gt;
+쉽게 생각해서 큐의 입구는 두개가 있다고 가정하면 된다. 한 쪽 끝에선 삽입 작업을 하고 다른 한 쪽 끝에선 삭제 작업이 이루어 지고 있다.&lt;br&gt;
+삭제 연산만 수행되는 곳을 &lt;code class=&quot;language-text&quot;&gt;front&lt;/code&gt;, 삽입 연산만 수행되는 곳을 &lt;code class=&quot;language-text&quot;&gt;rear&lt;/code&gt;로 정해 각각의 연산작업만 수행된다.&lt;br&gt;
+&lt;code class=&quot;language-text&quot;&gt;rear&lt;/code&gt;에서 이루어지는 삽입연산을 &lt;code class=&quot;language-text&quot;&gt;enQueue&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;front&lt;/code&gt;에서 이루어지는 삭제연산을 &lt;code class=&quot;language-text&quot;&gt;deQueue&lt;/code&gt;라 부른다.&lt;br&gt;
+접근 방법은 위에 설명했다 시피 가장 첫 원소와 끝 원소로만 가능하다. 즉 &lt;code class=&quot;language-text&quot;&gt;front&lt;/code&gt;에서는 가장 먼저 큐에 들어온 &lt;code class=&quot;language-text&quot;&gt;첫 번째 원소&lt;/code&gt;가 되며, &lt;code class=&quot;language-text&quot;&gt;rear&lt;/code&gt;에서는 가장 늦게 큐에 들어온 &lt;code class=&quot;language-text&quot;&gt;마지막 원소&lt;/code&gt;가 되는 것 이다.&lt;/p&gt;
+&lt;h3&gt;큐 활용 예&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;은행 업무&lt;/li&gt;
+&lt;li&gt;프로세스 관리&lt;/li&gt;
+&lt;li&gt;너비 우선 탐색(BFS / breadth first search) 구현&lt;/li&gt;
+&lt;li&gt;캐시(cache) 구현&lt;/li&gt;
+&lt;li&gt;우선순위가 같은 작업의 예약 구현&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;큐 예시&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c++&quot;&gt;&lt;pre class=&quot;language-c++&quot;&gt;&lt;code class=&quot;language-c++&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#define MAX_SIZE 5
+
+
+int queue[MAX_SIZE];
+int front = -1;
+int rear = -1;
+
+
+
+int isEmpty(void) {
+	if (front == rear)
+	{
+		return true;	
+	 } 
+	else
+	{
+		return false;
+	}
+}
+
+void push(int val) {
+	if ((rear + 1) % MAX_SIZE == front)
+	{
+		printf(&amp;quot;----isFull----\n&amp;quot;);
+	}
+	else
+	{
+		queue[++rear] = val;
+	}
+}
+
+int pop() {
+	if(isEmpty())
+	{
+		printf(&amp;quot;----isEmpty---\n&amp;quot;);
+	}
+	else
+	{
+		front = (front + 1) % MAX_SIZE;
+		return queue[front];
+	}
+}
+
+
+int main() {
+	int act = 0;
+	int data;
+	
+	printf(&amp;quot;명령어를 입력하세요\n&amp;quot;);
+	printf(&amp;quot;1.push\t 2.pop\t 3.exit \n&amp;quot;);
+	scanf(&amp;quot;%d&amp;quot;, &amp;amp;act);
+	
+	switch(act)
+	{
+		case 1:
+			printf(&amp;quot;insert push val : &amp;quot;);
+			scanf(&amp;quot;%d&amp;quot;, &amp;amp;data);
+			push(data);
+			break;
+		case 2:
+			printf(&amp;quot;pop()-----&amp;gt;&amp;quot;);
+			printf(&amp;quot;%d\n&amp;quot;, pop());
+			break;
+			
+		case 3:
+			act = 4;
+			break;
+			
+		default:
+			break;
+	}
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
