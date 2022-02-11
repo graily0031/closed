@@ -1,6 +1,6 @@
 ---
 title: SQL 개념 익히기 - JOIN
-date: "2022-02-23T18:56:00.000Z"
+date: "2022-02-03T18:56:00.000Z"
 template: "blog"
 draft: false
 slug: "/blog/sql_join/"

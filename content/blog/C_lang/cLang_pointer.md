@@ -1,6 +1,6 @@
 ---
 title: C언어 포인터
-date: "2022-02-23T18:56:00.000Z"
+date: "2022-02-03T18:56:00.000Z"
 template: "blog"
 draft: false
 slug: "/blog/pointer/"
