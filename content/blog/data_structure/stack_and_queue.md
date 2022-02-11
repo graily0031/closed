@@ -1,5 +1,5 @@
 ---
-title: [자료구조] 스택(stack) & 큐(queue)
+title: 스택(stack) & 큐(queue)
 date: "2022-02-12T00:00:00.000Z"
 template: "blog"
 draft: false
