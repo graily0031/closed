@@ -262,6 +262,7 @@ a:focus {
   top: var(--spacing-0);
   min-height: var(--spacing-12);
   line-height: var(--spacing-12);
+  z-index: 1000;
 }
 .dark > DIV > DIV > DIV > HEADER {
   background-color: var(--color-background-dark);
