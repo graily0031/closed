@@ -14,9 +14,9 @@ description: "이전에 hugo를 이용해 블로그를 만들어보면서 기록
 하지만 이 방법도 예전에 비해 조금 나아졌을 뿐 실력을 늘리는데 도움이 되지 못했다. 단순히 찾아보고 끝내지 말고 당일 저녁에라도 공부해보자며 이것저것 정보를 찾아보다 개발 블로그의 필요성을 느끼게 되었고 공부하는 과정과 결과물을 기록하고자 블로그를 제작하게 되었다.   
 
 
-##Blog 만들기
+## Blog 만들기
 ※ 필자는 현재 Windows 사용 중이다.   
-###Hugo 설치
+### Hugo 설치
 일단 Hugo를 다운받고 설치해야 하는데,필자의 경우 압축파일 안에 있는 파일들을 C drive에 Hugo\bin 디렉토리를 생성한 후 bin폴더 안에 넣어주었다.   
 2개의 Repository 생성   
 Github action을 이용하면 하나의 Repository로도 사용할 수 있다고 한다. 하지만 그렇게 만들기 어려울 것 같아서 필자는 총 두개의 Repository를 만들었다.   
@@ -24,7 +24,7 @@ Github action을 이용하면 하나의 Repository로도 사용할 수 있다고
 * 실제로 구동 될 Repository 2 (아이디(혹은 팀 이름).github.io) 필자는 Repository 1의 경우 visibility를 ‘private’로 설정한 뒤 생성하였다. 이럴경우 나중에 푸시할 때 id & password 혹은 SSH key를 요구한다. (현재 개인용 컴퓨터로만 작성하기 때문에 SSH Key를 이용하는 중)
 
 
-###hugo 새로운 사이트 생성
+### hugo 새로운 사이트 생성
 CMD나 PowreShell 혹은 git bash를 실행하고 Hugo를 설치한 디렉토리로 이동한 뒤
 (필자는 C:\Hugo\bin에 위치) hugo new site <사이트명(임의지정가능)>을 입력하여 사이트를 생성했다.
 ```bash
@@ -42,7 +42,7 @@ $ git clone https://github.com/아이디/테마.git themes/테마이름
 /* 2번 선택지 : submodule로 git Repository 받아올 경우 */
 $ git submodule add https://github.com/아이디/테마.git themes/테마이름
 ```
-###blog Remote, Submodule 설정 및 Github 연동
+### blog Remote, Submodule 설정 및 Github 연동
 ```bash
 /* 현재 디렉토리 ->> C:/Hugo/bin/blog */
  
