@@ -15,10 +15,6 @@ module.exports = {
     `gatsby-plugin-image`,
     'gatsby-plugin-dark-mode',
     {
-      resolve: `gatsby-transformer-remark`,
-      options: { plugins: [`gatsby-remark-prismjs`,] }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -40,6 +36,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
+              plugins: [`gatsby-remark-prismjs`,]
             },
           },
           {
