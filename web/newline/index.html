@@ -37,7 +37,7 @@ void function() {
   setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
 }()
     </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/">일기장</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">오라클에서 불러온 텍스트 데이터 HTML(Thymeleaf)에서의 개행 처리</h1><p>March 01, 2022</p></header><section itemProp="articleBody"><h2>오라클에서 개행문자 처리</h2>
-<p>오라클에서 개행이 포함된 텍스트 데이터를 HTML에서 개행 처리하여 출력하고자 할 때 개행문자를 <br/>로 변경해주면 아주 간단하게 처리해줄 수 있다.<br>
+<p>오라클에서 개행이 포함된 텍스트 데이터를 HTML에서 개행 처리하여 출력하고자 할 때 개행문자를 <code class="language-text">&lt;br/></code>로 변경해주면 아주 간단하게 처리해줄 수 있다.<br>
 필자가 처음 했던 방법은 이러하다.</p>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// String 형식</span>
 <span class="token comment">//...</span>
